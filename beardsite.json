@@ -41,7 +41,7 @@
     },
     "variables": {
         "BackendServer2": "Backend2",
-        "NICname2": "BackendNIC2",
+        "NICname2": "Backendinterfacecard2",
         "backendPIP2": "BackendPublicIP2"
     },
     "resources": [
@@ -323,7 +323,7 @@
             "name": "[variables('BackendServer2')]",
             "location": "[resourceGroup().location]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/networkInterfaces', variables('backendPIP2'))]"
+                "[resourceId('Microsoft.Network/networkInterfaces', variables('NICname2'))]"
             ],
             "tags": {
                 "BeardSite": "[resourceGroup().location]"
